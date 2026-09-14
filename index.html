@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>SoundSphere - Modern Cross-Platform Music Player</title>
+  <meta name="description"
+    content="Aplikasi pemutar musik modern responsif untuk Web, PC, dan Mobile dengan visualizer audio dan lirik interaktif.">
+  <meta name="theme-color" content="#0a0c10">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'><circle cx='12' cy='12' r='10'/><polygon points='10 8 16 12 10 16 10 8' fill='white'/></svg>">
+
+  <!-- Typography: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- Ambient Dynamic Lighting Blobs -->
+  <div class="ambient-bg">
+    <div class="blob-1"></div>
+    <div class="blob-2"></div>
+  </div>
+
+  <!-- Master Application Shell -->
+  <div id="app-shell">
+
+    <!-- 3-Column Desktop Grid / Fluid Mobile Layout -->
+    <main class="main-container">
+      <!-- Left Column: Desktop Navigation & Playlists -->
+      <aside class="sidebar-col" id="sidebar-container"></aside>
+
+      <!-- Center Column: Search, Genres, Hero, Song Cards & Table Feed -->
+      <section class="center-col" id="main-content-container"></section>
+
+      <!-- Right Column: Visualizer Canvas, Lyrics Karaoke, & Playback Queue -->
+      <aside class="right-panel-col" id="right-panel-container"></aside>
+    </main>
+
+    <!-- Desktop Persistent Bottom Player Bar -->
+    <footer class="bottom-player-bar" id="bottom-player-container"></footer>
+
+    <!-- Mobile-First Layer (Mini Player, Bottom Nav, Expandable Full-Screen Modal) -->
+    <div id="mobile-layer-container"></div>
+
+    <!-- Modals Layer (Create Playlist, Notifications) -->
+    <div id="modal-layer-container"></div>
+
+  </div>
+
+  <!-- Application Modular Logic -->
+  <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
